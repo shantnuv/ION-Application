@@ -17,10 +17,10 @@ Then open http://localhost:3000/#!/ on your browser.
 
 The application currently does not uses any database to get the users, so it
 supports only 2 dummy users, as follows:
-1. username: user1
-   password: user1@123
-2. username: user2
-   password: user2@123
+1. USERNAME: user1
+   PASSWORD: user1@123
+2. USERNAME: user2
+   PASSWORD: user2@123
 
 The application has 2 pages currently:
 --Home page
