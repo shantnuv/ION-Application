@@ -1,0 +1,60 @@
+<div class='login-card'>
+  <md-progress-circular ng-if="loginCtrl.showLoader"
+                        md-mode="indeterminate"
+                        md-diameter="100"
+                        class='progress-bar'>
+  </md-progress-circular>
+
+  <md-card ng-if="!loginCtrl.showLoader"
+           class='login-card'
+           flex
+           layout='column'>
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-headline">Login</span>
+      </md-card-title-text>
+    </md-card-title>
+    <md-content class='login-form-content'
+                ng-form='loginForm'>
+      <md-input-container>
+        <label>Username</label>
+        <input name='username'
+               required
+               ng-model="loginCtrl.userName">
+        <div ng-messages="loginForm.username.$error"
+             role="alert"
+             md-auto-hide="false">
+          <div ng-message="required">Please enter the username.</div>
+        </div>
+      </md-input-container>
+      <md-input-container>
+        <label>Password</label>
+        <input type='password'
+               name='password'
+               required
+               ng-model="loginCtrl.password">
+        <div ng-messages="loginForm.password.$error"
+             role="alert"
+             md-auto-hide="false">
+          <div ng-message="required">
+            Please enter the password.
+          </div>
+          <div ng-message="pattern">
+            Please use valid characters in password.
+          </div>
+        </div>
+      </md-input-container>
+    </md-content>
+    <div class='error-message'>{{loginCtrl.errorMessage}}</div>
+    <md-action>
+      <md-button ng-click='loginCtrl.login()'
+                 class='md-raised md-primary'>
+        Login
+      </md-button>
+      <md-button ui-sref='home'
+                 class='md-raised'>
+        Cancel
+      </md-button>
+    </md-action>
+  </md-card>
+</div>

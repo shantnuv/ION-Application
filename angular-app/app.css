@@ -1,0 +1,36 @@
+.login-card {
+  border-radius: 4px;
+  max-width: 80%;
+}
+
+.home-container {
+  justify-content: center;
+}
+
+.app-title {
+  flex-grow: 2;
+  text-align: center;
+}
+
+.login-form-content {
+  display:  flex;
+  flex-direction:  column;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.error-message {
+  color: red;
+  font-style: italic;
+  padding-left: 10px;
+}
+
+.progress-bar {
+  left: calc(50% - 50px);
+  position: absolute;
+  top: calc(50% - 50px);
+}
+
+.current-status {
+  font-style: oblique;
+}
